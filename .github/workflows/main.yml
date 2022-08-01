@@ -9,6 +9,7 @@ on:
       label:
         required: true
         type: string
+
 env:
   JIRA_TAG: TS
 
@@ -17,7 +18,4 @@ jobs:
     uses: amplitude/Amplitude-TypeScript/.github/workflows/jira-issue-create.yml@github-template
     with:
       label: "Flutter"
-      JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
-      JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-      JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-      JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
+      secrets: inherit
