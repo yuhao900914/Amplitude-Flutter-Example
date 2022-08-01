@@ -13,10 +13,7 @@ env:
   JIRA_TAG: TS
 
 jobs:
-  build:
-    runs-on: ubuntu-18.04
-    environment: Jira
-    name: SDK Bot Jira Issue Creation
-    steps:
-      - name: TEST 
-        run: echo "$JIRA_TAG"
+  call-workflow-passing-data:
+    uses: Amplitude-TypeScript/.github/workflows/jira-issue-create.yml@github-template
+    with:
+      label: "Flutter"
