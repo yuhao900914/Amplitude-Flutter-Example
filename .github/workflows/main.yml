@@ -7,12 +7,13 @@ on:
   workflow_call:
     inputs:
       label:
-        required: true
         type: string
 
 jobs:
   call-workflow-passing-data:
     uses: amplitude/Amplitude-TypeScript/.github/workflows/jira-issue-create.yml@github-template
-    with:
-      label: "Flutter"
-    secrets: inherit
+    secrets:
+      JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+      JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+      JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+      JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
