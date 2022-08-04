@@ -10,9 +10,6 @@ on:
         required: true
         type: string
 
-env:
-  JIRA_TAG: TS
-
 jobs:
   call-workflow-passing-data:
     uses: amplitude/Amplitude-TypeScript/.github/workflows/jira-issue-create.yml@github-template
