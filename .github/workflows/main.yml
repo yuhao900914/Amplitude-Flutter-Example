@@ -11,7 +11,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: amplitude/Amplitude-TypeScript/.github/workflows/jira-issue-create.yml@github-template
+    uses: yuhao900914/Amplitude-Flutter-Example/.github/workflows/jira_create_issue_template.yml@main
     secrets:
       JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
       JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
