@@ -14,8 +14,4 @@ jobs:
     uses: yuhao900914/Amplitude-Flutter-Example/.github/workflows/jira_create_issue_template.yml@main
     with:
       label: "Flutter"
-    secrets:
-      JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
-      JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-      JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-      JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
+    secrets: inherit
