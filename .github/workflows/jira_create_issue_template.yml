@@ -8,19 +8,6 @@ on:
       label:
         type: string
         required: true
-    secrets:
-      JIRA_BASE_URL:
-        description: 'Jira Base Url'
-        required: true
-      JIRA_USER_EMAIL:
-        description: 'Jira User Email'
-        required: true
-      JIRA_API_TOKEN:
-        description: 'Jira Token'
-        required: true
-      JIRA_PROJECT:
-        description: 'Jira Project'
-        required: true
 
 jobs:
   build:
